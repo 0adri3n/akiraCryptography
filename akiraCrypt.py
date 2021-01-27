@@ -8,7 +8,7 @@ class akiraCryptography:
         self.__k = key
 
 
-    def get_key(self): #Accesseur à la clé
+    def get_key(self):
         return self.__k
 
 
