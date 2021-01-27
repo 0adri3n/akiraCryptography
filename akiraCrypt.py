@@ -16,21 +16,19 @@ class akiraCryptography:
 
         key = self.get_key()
 
-        key_value = int(hashlib.sha256(key.encode('utf-8')).hexdigest(), 16) % 10 ** 8  # Encrypting of the key in SHA256
+        key_value = int(hashlib.sha256(key.encode('utf-8')).hexdigest(), 16) % 10 ** 8  
 
-        logkey = math.log(key_value)  # On récupère le logarithme néperien de ce précédent hash
+        logkey = math.log(key_value)  
 
         lst = []
         for n in str(logkey):
             lst.append(n)
 
-        dec = lst[len(lst) - 2] + lst[len(lst) - 1]  # On récupère les deux derniers chiffres de la suite après la virgule
+        dec = lst[len(lst) - 2] + lst[len(lst) - 1]  
 
-        dec_finale = int(dec) // math.log(int(dec))  # On divise la somme de ces deux derniers chiffres par son propre logarithme néperien
+        dec_finale = int(dec) // math.log(int(dec))  
 
-        pas = int(dec_finale)  # On garde le dernier résultat en tant que pas
-
-        # On déchiffre la phrase qui sera entré par l'utilisateur avec le pas en chiffrement de César
+        pas = int(dec_finale)  
 
         liste_lettre = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
@@ -53,21 +51,19 @@ class akiraCryptography:
 
         key = self.get_key()
 
-        key_value = int(hashlib.sha256(key.encode('utf-8')).hexdigest(), 16) % 10 ** 8  # Encodage de la clé en hash SHA256
+        key_value = int(hashlib.sha256(key.encode('utf-8')).hexdigest(), 16) % 10 ** 8 
 
-        logkey = math.log(key_value)  # On récupère le logarithme néperien de ce précédent hash
+        logkey = math.log(key_value)  
 
         lst = []
         for n in str(logkey):
             lst.append(n)
 
-        dec = lst[len(lst) - 2] + lst[len(lst) - 1]  # On récupère les deux derniers chiffres de la suite après la virgule
+        dec = lst[len(lst) - 2] + lst[len(lst) - 1]  
 
-        dec_finale = int(dec) // math.log(int(dec))  # On divise la somme de ces deux derniers chiffres par son propre logarithme néperien
+        dec_finale = int(dec) // math.log(int(dec))  
 
-        pas = int(dec_finale)  # On garde le dernier résultat en tant que pas
-
-        # On déchiffre la phrase qui sera entré par l'utilisateur avec le pas en chiffrement de César
+        pas = int(dec_finale)  
 
         liste_lettre = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
